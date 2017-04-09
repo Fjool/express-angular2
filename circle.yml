@@ -1,4 +1,3 @@
 test:
-  post:
-    - npm test
-    - cd client && gulp test
+  override:
+    - ./node_modules/.bin/gulp ci
