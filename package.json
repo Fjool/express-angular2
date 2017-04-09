@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "./bin/test.sh"
+    "test": "sh ./bin/test.sh"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
