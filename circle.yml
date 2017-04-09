@@ -1,4 +1,4 @@
 test:
   post:
     - npm test
-    - client/gulp test
+    - cd client && gulp test
