@@ -3,3 +3,6 @@ deployment:
     branch: master
     heroku:
       appname: angularexpressspike
+  staging:
+    branch: staging
+      appname: angularexpressspike-staging
