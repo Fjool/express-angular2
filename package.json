@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "./app/server.js | bistre",
+    "start": "node ./app/server.js | bistre",
     "test": "tape './**/*.tape.js' | node_modules/tap-spec/bin/cmd.js"
   },
   "main": "./app/server",
