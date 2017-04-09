@@ -1,11 +1,12 @@
 {
-  "name": "express-generated",
+  "name": "ExpressAngular2-Spike",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "test": "tape './**/*.tape.js' | tap-dot"
+    "start": "./app/server.js | bistre",
+    "test": "tape './**/*.tape.js' | node_modules/tap-spec/bin/cmd.js"
   },
+  "main": "./app/server",
   "dependencies": {
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
@@ -15,9 +16,13 @@
     "serve-favicon": "~2.4.2"
   },
   "devDependencies": {
+    "bistre": "^1.0.1",
+    "bole": "^3.0.2",
     "gulp-cli": "^1.2.2",
     "pug": "^2.0.0-beta11",
+    "supertest": "^3.0.0",
     "tap-dot": "^1.0.5",
+    "tap-spec": "^4.1.1",
     "tape": "^4.6.3"
   },
   "engines": {

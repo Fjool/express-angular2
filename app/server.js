@@ -3,10 +3,19 @@
 /**
  * Module dependencies.
  */
-
-var app = require('../app');
+var app = require('./index')
+//var config = require('./config')
 var debug = require('debug')('express-generated:server');
 var http = require('http');
+
+// Use whichever logging system you prefer.
+// Doesn't have to be bole, I just wanted something more or less realistic
+var bole = require('bole')
+
+bole.output({level: 'debug', stream: process.stdout})
+var log = bole('server')
+
+log.info('server process starting')
 
 /**
  * Get port from environment and store in Express.
@@ -24,9 +33,6 @@ var server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
-
-// use whatever templating system(s) you like
-app.set('view engine', 'pug')
 
 server.listen(port);
 server.on('error', onError);
