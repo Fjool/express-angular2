@@ -1,8 +1,8 @@
 function findAll (callback) {
   setImmediate(function () {
     callback(null, [
-      {id: 1, name: 'Jane Doe'},
-      {id: 2, name: 'John Doe'}
+      {id: 1, name: 'Boring Dave'},
+      {id: 2, name: 'Tedious Trevor'}
     ])
   })
 }
