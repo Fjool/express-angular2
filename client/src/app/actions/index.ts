@@ -25,5 +25,6 @@ export function clearCompleted() {
 }
 
 export function changeVisibility(filter: string) {
+  console.log("123");
   return {type: filter};
 }

@@ -3,7 +3,11 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+  res.send('respond with a resource')
+})
+
+router.put('/', function (req, res) {
+  res.send('Got a PUT request at /')
+})
 
 module.exports = router;
