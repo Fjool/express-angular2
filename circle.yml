@@ -7,6 +7,10 @@ deployment:
     branch: staging
     heroku:
       appname: angularexpressspike-staging
-  dependencies:
-    pre:
-      - npm install gulp-cli -g
+dependencies:
+  pre:
+    - npm install gulp-cli -g
+
+machine:
+  node:
+    version: 7.8.0
