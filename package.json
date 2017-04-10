@@ -7,6 +7,9 @@
     "test": "tape './**/*.tape.js' | node_modules/tap-spec/bin/cmd.js",
     "postinstall": "cd client && gulp build & cd .."
   },
+    "dependencies": {
+      "client": "file:./client"
+  },
   "main": "./app/server",
   "dependencies": {
     "body-parser": "~1.17.1",
