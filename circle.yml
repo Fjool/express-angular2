@@ -9,4 +9,4 @@ deployment:
       appname: angularexpressspike-staging
   dependencies:
     pre:
-      - npm install gulp -g
+      - npm install gulp-cli -g
