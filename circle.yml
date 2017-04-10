@@ -12,4 +12,4 @@ machine:
     version: 7.8.0
 dependencies:
   post:
-    - cd client && npm install && gulp build & cd ..
+    - cd client && npm install && echo Ok && gulp build && echo ok && cd ..
