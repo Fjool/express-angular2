@@ -8,7 +8,8 @@ function findAll (callback) {
       {id: 5, name: 'Lazy Larry'},
       {id: 6, name: 'Immobile Ian'},
       {id: 7, name: 'Uninspiring Ursula'},
-      {id: 8, name: 'Morose Michael'}
+      {id: 8, name: 'Morose Michael'},
+      {id: 9, name: 'Endless Erin'}
     ])
   })
 }
