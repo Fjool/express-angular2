@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./app/server.js | bistre",
-    "test": "tape './**/*.tape.js' | node_modules/tap-spec/bin/cmd.js"
+    "test": "tape './**/*.tape.js' | node_modules/tap-spec/bin/cmd.js",
+    "postinstall": "cd client && npm install && gulp build && cd .."
   },
   "main": "./app/server",
   "dependencies": {
