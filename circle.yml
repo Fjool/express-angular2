@@ -7,3 +7,6 @@ deployment:
     branch: staging
     heroku:
       appname: angularexpressspike-staging
+machine:
+  node:
+    version: 7.8.0
