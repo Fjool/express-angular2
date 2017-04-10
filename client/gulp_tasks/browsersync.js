@@ -1,21 +1,28 @@
-const gulp = require('gulp');
-const browserSync = require('browser-sync');
-const spa = require('browser-sync-spa');
+const env = require('gulp-environments')
 
-const browserSyncConf = require('../conf/browsersync.conf');
-const browserSyncDistConf = require('../conf/browsersync-dist.conf');
+dev = env.development
 
-browserSync.use(spa());
+if (dev)
+{
+  const gulp = require('gulp');
+  const browserSync = require('browser-sync');
+  const spa = require('browser-sync-spa');
 
-gulp.task('browsersync', browserSyncServe);
-gulp.task('browsersync:dist', browserSyncDist);
+  const browserSyncConf = require('../conf/browsersync.conf');
+  const browserSyncDistConf = require('../conf/browsersync-dist.conf');
 
-function browserSyncServe(done) {
-  browserSync.init(browserSyncConf());
-  done();
-}
+  browserSync.use(spa());
 
-function browserSyncDist(done) {
-  browserSync.init(browserSyncDistConf());
-  done();
+  gulp.task('browsersync', browserSyncServe);
+  gulp.task('browsersync:dist', browserSyncDist);
+
+  function browserSyncServe(done) {
+    browserSync.init(browserSyncConf());
+    done();
+  }
+
+  function browserSyncDist(done) {
+    browserSync.init(browserSyncDistConf());
+    done();
+  }
 }

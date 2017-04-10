@@ -14,6 +14,7 @@ import {AppModule} from './app';
 
 declare var process: any;
 if (process.env.NODE_ENV === 'production') {
+  console.log("HIT PRODUCTION")
   enableProdMode();
 } else {
   Error['stackTraceLimit'] = Infinity; // tslint:disable-line:no-string-literal
