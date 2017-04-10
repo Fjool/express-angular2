@@ -15,13 +15,14 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
     "express": "~4.15.2",
-    "morgan": "~1.8.1",
-    "serve-favicon": "~2.4.2",
     "gulp": "github:gulpjs/gulp#4ed9a4a3275559c73a396eff7e1fde3824951ebb",
+    "gulp-environments": "^0.1.2",
     "gulp-filter": "^5.0.0",
     "gulp-hub": "frankwallis/gulp-hub#d461b9c700df9010d0a8694e4af1fb96d9f38bf4",
     "gulp-sass": "^3.1.0",
-    "gulp-util": "^3.0.8"
+    "gulp-util": "^3.0.8",
+    "morgan": "~1.8.1",
+    "serve-favicon": "~2.4.2"
   },
   "devDependencies": {
     "gulp-cli": "^1.2.2",
