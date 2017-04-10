@@ -11,7 +11,7 @@ var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/../public')));
 
 app.use(require('./site/router'))
 app.use('/api', require('./patients/router'))
