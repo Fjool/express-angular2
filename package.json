@@ -5,14 +5,13 @@
   "scripts": {
     "start": "node ./app/server.js | bistre",
     "test": "tape './**/*.tape.js' | node_modules/tap-spec/bin/cmd.js",
-    "postinstall": "cd client && gulp build & cd .."
+    "postinstall": "cd client && npm install && gulp build & cd .."
   },
   "main": "./app/server",
   "dependencies": {
     "bistre": "^1.0.1",
     "body-parser": "~1.17.1",
     "bole": "^3.0.2",
-    "client": "file:client",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
     "express": "~4.15.2",
