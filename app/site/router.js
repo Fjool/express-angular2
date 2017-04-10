@@ -1,13 +1,17 @@
 var express = require('express')
-var join = require('path').join
+var path = require('path')
+// var join = require('path').join
+var log = require('bole')('main/router')
 
 var router = new express.Router()
+var public_path = path.join(__dirname, '../../', 'public')
 
-function home (req, res) {
-  res.sendStatus(401);
+function angular(req, res) {
+  var index = path.resolve(path.join(public_path, 'index.html'))
+  res.sendFile(index)
 }
 
-router.use(express.static(join(__dirname, '../../wwwroot')))
-router.get('/', home)
+router.use(express.static(public_path));
+router.get('/', angular)
 
 module.exports = router

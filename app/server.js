@@ -1,8 +1,5 @@
 #!/usr/bin/env node
 
-/**
- * Module dependencies.
- */
 var app = require('./index')
 //var config = require('./config')
 var debug = require('debug')('express-generated:server');
