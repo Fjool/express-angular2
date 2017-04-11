@@ -4,21 +4,15 @@ const gulp = require('gulp');
 const filter = require('gulp-filter');
 
 const conf = require('../conf/gulp.conf');
-const env = require('gulp-environments');
-
-var dev = env.development;
 
 gulp.task('other', other);
 
-if(dev())
-{
-  gulp.task('clean', clean);
+gulp.task('clean', clean);
 
-  const del = require('del');
+const del = require('del');
 
-  function clean() {
-    return del([conf.paths.dist, conf.paths.tmp]);
-  }
+function clean() {
+  return del([conf.paths.dist, conf.paths.tmp]);
 }
 
 function other() {
