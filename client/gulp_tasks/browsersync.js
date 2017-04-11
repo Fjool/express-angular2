@@ -1,8 +1,8 @@
 const env = require('gulp-environments')
 
-dev = env.development
+var dev = env.development
 
-if (dev)
+if (dev())
 {
   const gulp = require('gulp');
   const browserSync = require('browser-sync');

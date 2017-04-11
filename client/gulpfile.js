@@ -1,10 +1,10 @@
 const gulp         = require('gulp');
-const environments = require('gulp-environments');
+const env          = require('gulp-environments');
 const HubRegistry  = require('gulp-hub');
 
-var development  = environments.development;
+var dev = env.development;
 
-if (development())
+if (dev())
 { console.log("Environment is: development")
   const browserSync = require('browser-sync');
 }
@@ -24,7 +24,7 @@ gulp.registry(hub);
 gulp.task('build', gulp.series(gulp.parallel('other', 'webpack:dist')));
 gulp.task('default', gulp.series('clean', 'build'));
 
-if (development())
+if (dev())
 {
   gulp.task('test', gulp.series('karma:single-run'));
   gulp.task('test:auto', gulp.series('karma:auto-run'));
