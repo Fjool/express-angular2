@@ -1,16 +1,15 @@
-const gulp         = require('gulp');
-const env          = require('gulp-environments');
-const HubRegistry  = require('gulp-hub');
+const gulp        = require('gulp');
+const env         = require('gulp-environments');
+const HubRegistry = require('gulp-hub');
+const browserSync = require('browser-sync');
 
 var dev = env.development;
 
 if (dev())
 { console.log("Environment is: development")
-  const browserSync = require('browser-sync');
 }
 else
-{
-  console.log("Environment is: production")
+{  console.log("Environment is: production")
 }
 
 const conf = require('./conf/gulp.conf');
