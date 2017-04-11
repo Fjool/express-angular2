@@ -10,3 +10,8 @@ deployment:
 machine:
   node:
     version: 7.8.0
+
+## Customize test commands
+test:
+  post:
+    - cd client && gulp test
