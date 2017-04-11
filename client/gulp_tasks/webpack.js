@@ -3,23 +3,17 @@ const gutil = require('gulp-util');
 const webpack = require('webpack');
 const webpackDistConf = require('../conf/webpack-dist.conf');
 const gulpConf = require('../conf/gulp.conf');
-const env = require('gulp-environments');
 
-var dev = env.development;
+const browsersync = require('browser-sync');
+const webpackConf = require('../conf/webpack.conf');
 
-if (dev())
-{
-  const browsersync = require('browser-sync');
-  const webpackConf = require('../conf/webpack.conf');
+gulp.task('webpack:dev', done => {
+  webpackWrapper(false, webpackConf, done);
+});
 
-  gulp.task('webpack:dev', done => {
-    webpackWrapper(false, webpackConf, done);
-  });
-
-  gulp.task('webpack:watch', done => {
-    webpackWrapper(true, webpackConf, done);
-  });
-}
+gulp.task('webpack:watch', done => {
+  webpackWrapper(true, webpackConf, done);
+});
 
 gulp.task('webpack:dist', done => {
   process.env.NODE_ENV = 'production';
@@ -43,11 +37,7 @@ function webpackWrapper(watch, conf, done) {
       done();
       done = null;
     } else {
-
-      // this is crummy - just avoiding having ununecessary dependencies in production
-      if (dev()) {
-        browsersync.reload();
-      }
+      browsersync.reload();
     }
   };
 
